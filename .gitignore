@@ -30,6 +30,13 @@ DerivedData/
 *.dSYM.zip
 *.dSYM
 
+#CocoaPods
+Pods
+!Podfile
+Podfile.lock
+!Manifest.lock
+
+
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
