@@ -41,15 +41,6 @@ enum TabBarItemDatable: Int {
         }
     }
     
-    var navigationBarHidden: Bool {
-        switch self {
-        case .chat: return false
-        case .contact: return false
-        case .discover: return false
-        case .mine: return true
-        }
-    }
-    
     static func itemDatable(selected: Int) -> TabBarItemDatable {
         TabBarItemDatable(rawValue: selected) ?? .chat
     }

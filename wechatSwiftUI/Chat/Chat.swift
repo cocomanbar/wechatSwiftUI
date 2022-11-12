@@ -9,7 +9,36 @@ import SwiftUI
 
 struct Chat: View {
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            ChatList()
+                .navigationTitle(TabBarItemDatable.chat.title)
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarItems(leading: leading(), trailing: trailing())
+        }
+    }
+}
+
+private struct leading: View {
+    var body: some View {
+        Button {
+            
+        } label: {
+            Image(systemName: "ellipsis")
+                .resizable()
+                .foregroundColor(.primary)
+        }
+    }
+}
+
+private struct trailing: View {
+    var body: some View {
+        Button {
+            
+        } label: {
+            Image(systemName: "plus.circle")
+                .resizable()
+                .foregroundColor(.primary)
+        }
     }
 }
 
