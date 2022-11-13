@@ -13,7 +13,7 @@ struct ChatModel: Identifiable {
     var avatar: String?
     var user_name: String?
     var content: String?
-    var message: ChatMessage?
+    var message: ChatMessageModel?
     var time: String?
 }
 

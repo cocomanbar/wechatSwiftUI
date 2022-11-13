@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import HandyJSON
 
 enum ChatMessageType {
     case text
@@ -18,20 +19,14 @@ enum ChatMessageType {
     case system
 }
 
-struct ChatMessage {
+struct ChatMessageModel {
     
-    var user_info: ChatUser
+    var user_info: ChatUserModel
     var messageType: ChatMessageType
-    var message: Message
+    var message: MessageModel
 }
 
-struct ChatUser {
-    
-    var avatar: String?
-    var user_name: String?
-}
-
-struct Message {
+struct MessageModel {
     
     var image: String?
     var videoUrl: String?

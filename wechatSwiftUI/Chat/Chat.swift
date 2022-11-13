@@ -11,14 +11,14 @@ struct Chat: View {
     var body: some View {
         NavigationView {
             ChatList()
-                .navigationTitle(TabBarItemDatable.chat.title)
-                .navigationBarTitleDisplayMode(.inline)
-                .navigationBarItems(leading: leading(), trailing: trailing())
+            .navigationTitle(TabBarItemDatable.chat.title)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(leading: Leading(), trailing: Trailing())
         }
     }
 }
 
-private struct leading: View {
+private struct Leading: View {
     var body: some View {
         Button {
             
@@ -30,10 +30,13 @@ private struct leading: View {
     }
 }
 
-private struct trailing: View {
+private struct Trailing: View {
+    
+    @State private var isPressented: Bool = false
+    
     var body: some View {
         Button {
-            
+            isPressented = true
         } label: {
             Image(systemName: "plus.circle")
                 .resizable()

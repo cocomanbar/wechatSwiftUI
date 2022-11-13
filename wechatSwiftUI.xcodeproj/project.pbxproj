@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0260E7F8D8EBC68E6172954F /* Pods_wechatSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFACC464E23C31D7BF4C6496 /* Pods_wechatSwiftUI.framework */; };
-		0D93475348698FC0029C8ED3 /* Pods_wechatSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5C941C2E3CC928604C8981 /* Pods_wechatSwiftUITests.framework */; };
-		4EFB137344846DC6420A884D /* Pods_wechatSwiftUI_wechatSwiftUIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4620BC491E1D3A615F28D0B1 /* Pods_wechatSwiftUI_wechatSwiftUIUITests.framework */; };
+		437DA2A9798C1287624D1CFB /* libPods-wechatSwiftUI-wechatSwiftUIUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86980E4E88448408C02FEBA3 /* libPods-wechatSwiftUI-wechatSwiftUIUITests.a */; };
 		615D391F291FB04000251211 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D391E291FB04000251211 /* AppDelegate.swift */; };
 		615D3921291FB04000251211 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D3920291FB04000251211 /* SceneDelegate.swift */; };
 		615D3923291FB04000251211 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D3922291FB04000251211 /* ViewController.swift */; };
@@ -29,11 +27,22 @@
 		615D3966291FD31400251211 /* ChatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D3965291FD31400251211 /* ChatList.swift */; };
 		615D3968291FD32300251211 /* ChatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D3967291FD32300251211 /* ChatRow.swift */; };
 		615D396B291FD44100251211 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D396A291FD44100251211 /* ChatModel.swift */; };
-		615D396D291FD7F000251211 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D396C291FD7F000251211 /* ChatMessage.swift */; };
+		615D396D291FD7F000251211 /* ChatMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D396C291FD7F000251211 /* ChatMessageModel.swift */; };
 		615D396F291FD87100251211 /* Modelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D396E291FD87100251211 /* Modelable.swift */; };
 		615D3971291FDEA000251211 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D3970291FDEA000251211 /* ChatRoom.swift */; };
 		615D3973291FE78C00251211 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D3972291FE78C00251211 /* Search.swift */; };
 		615D3975291FE79700251211 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D3974291FE79700251211 /* SearchBar.swift */; };
+		615D39792920926F00251211 /* ContactList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D39782920926F00251211 /* ContactList.swift */; };
+		615D397B2920934200251211 /* ContactListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D397A2920934200251211 /* ContactListRow.swift */; };
+		615D397D2920935C00251211 /* ContactJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D397C2920935C00251211 /* ContactJson.swift */; };
+		615D39802920955800251211 /* ContactListJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 615D397F2920955800251211 /* ContactListJson.json */; };
+		615D398329209AC500251211 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D398229209AC500251211 /* Api.swift */; };
+		615D39852920A04400251211 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D39842920A04400251211 /* ApiService.swift */; };
+		615D39872920DF0900251211 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D39862920DF0900251211 /* ContactViewModel.swift */; };
+		615D398A2920F30D00251211 /* ContactDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D39892920F30D00251211 /* ContactDetail.swift */; };
+		615D398C2920FD3200251211 /* ContactSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D398B2920FD3200251211 /* ContactSectionHeader.swift */; };
+		63342019D5A6A7097F5B4E6F /* libPods-wechatSwiftUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2672AB783590416B92D447D /* libPods-wechatSwiftUITests.a */; };
+		C9A4C484D5B098EE534014C2 /* libPods-wechatSwiftUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D5DE42645B8242F40E2A6D /* libPods-wechatSwiftUI.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +64,6 @@
 
 /* Begin PBXFileReference section */
 		4007BB7EBE889D3912A9F2D3 /* Pods-wechatSwiftUI-wechatSwiftUIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wechatSwiftUI-wechatSwiftUIUITests.release.xcconfig"; path = "Target Support Files/Pods-wechatSwiftUI-wechatSwiftUIUITests/Pods-wechatSwiftUI-wechatSwiftUIUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4620BC491E1D3A615F28D0B1 /* Pods_wechatSwiftUI_wechatSwiftUIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wechatSwiftUI_wechatSwiftUIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8DEF664496711E5B304AD8 /* Pods-wechatSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wechatSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-wechatSwiftUITests/Pods-wechatSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		58BB1A36A9F2B3185B0B87C3 /* Pods-wechatSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wechatSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-wechatSwiftUI/Pods-wechatSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		615D391B291FB04000251211 /* wechatSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wechatSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,16 +89,26 @@
 		615D3965291FD31400251211 /* ChatList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatList.swift; sourceTree = "<group>"; };
 		615D3967291FD32300251211 /* ChatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRow.swift; sourceTree = "<group>"; };
 		615D396A291FD44100251211 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
-		615D396C291FD7F000251211 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		615D396C291FD7F000251211 /* ChatMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageModel.swift; sourceTree = "<group>"; };
 		615D396E291FD87100251211 /* Modelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modelable.swift; sourceTree = "<group>"; };
 		615D3970291FDEA000251211 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
 		615D3972291FE78C00251211 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		615D3974291FE79700251211 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		615D39782920926F00251211 /* ContactList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactList.swift; sourceTree = "<group>"; };
+		615D397A2920934200251211 /* ContactListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListRow.swift; sourceTree = "<group>"; };
+		615D397C2920935C00251211 /* ContactJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactJson.swift; sourceTree = "<group>"; };
+		615D397F2920955800251211 /* ContactListJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ContactListJson.json; sourceTree = "<group>"; };
+		615D398229209AC500251211 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		615D39842920A04400251211 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		615D39862920DF0900251211 /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		615D39892920F30D00251211 /* ContactDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetail.swift; sourceTree = "<group>"; };
+		615D398B2920FD3200251211 /* ContactSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSectionHeader.swift; sourceTree = "<group>"; };
 		693375C6F52E04A953F66ACC /* Pods-wechatSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wechatSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-wechatSwiftUI/Pods-wechatSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
-		6B5C941C2E3CC928604C8981 /* Pods_wechatSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wechatSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86980E4E88448408C02FEBA3 /* libPods-wechatSwiftUI-wechatSwiftUIUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wechatSwiftUI-wechatSwiftUIUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCED876C270413D4952F8B6E /* Pods-wechatSwiftUI-wechatSwiftUIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wechatSwiftUI-wechatSwiftUIUITests.debug.xcconfig"; path = "Target Support Files/Pods-wechatSwiftUI-wechatSwiftUIUITests/Pods-wechatSwiftUI-wechatSwiftUIUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CA405E499F3034D602363EAF /* Pods-wechatSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wechatSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-wechatSwiftUITests/Pods-wechatSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
-		CFACC464E23C31D7BF4C6496 /* Pods_wechatSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wechatSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3D5DE42645B8242F40E2A6D /* libPods-wechatSwiftUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wechatSwiftUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2672AB783590416B92D447D /* libPods-wechatSwiftUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wechatSwiftUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0260E7F8D8EBC68E6172954F /* Pods_wechatSwiftUI.framework in Frameworks */,
+				C9A4C484D5B098EE534014C2 /* libPods-wechatSwiftUI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D93475348698FC0029C8ED3 /* Pods_wechatSwiftUITests.framework in Frameworks */,
+				63342019D5A6A7097F5B4E6F /* libPods-wechatSwiftUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EFB137344846DC6420A884D /* Pods_wechatSwiftUI_wechatSwiftUIUITests.framework in Frameworks */,
+				437DA2A9798C1287624D1CFB /* libPods-wechatSwiftUI-wechatSwiftUIUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,12 +178,15 @@
 			isa = PBXGroup;
 			children = (
 				615D394E291FB0E800251211 /* Files */,
+				615D398129209AA900251211 /* Api */,
+				615D397E2920953100251211 /* Jsons */,
 				615D3962291FD0B100251211 /* Models */,
 				615D3961291FD09D00251211 /* Extensions */,
 				615D3960291FD07800251211 /* Components */,
 				615D391E291FB04000251211 /* AppDelegate.swift */,
 				615D3920291FB04000251211 /* SceneDelegate.swift */,
 				615D3922291FB04000251211 /* ViewController.swift */,
+				615D39882920DF2300251211 /* ViewModels */,
 				615D3969291FD33000251211 /* Search */,
 				615D395D291FBC1500251211 /* Mine */,
 				615D395A291FBC0300251211 /* Discover */,
@@ -228,6 +249,10 @@
 			isa = PBXGroup;
 			children = (
 				615D3958291FBBFB00251211 /* Contact.swift */,
+				615D39782920926F00251211 /* ContactList.swift */,
+				615D397A2920934200251211 /* ContactListRow.swift */,
+				615D398B2920FD3200251211 /* ContactSectionHeader.swift */,
+				615D39892920F30D00251211 /* ContactDetail.swift */,
 			);
 			path = Contact;
 			sourceTree = "<group>";
@@ -268,7 +293,8 @@
 			children = (
 				615D396E291FD87100251211 /* Modelable.swift */,
 				615D396A291FD44100251211 /* ChatModel.swift */,
-				615D396C291FD7F000251211 /* ChatMessage.swift */,
+				615D396C291FD7F000251211 /* ChatMessageModel.swift */,
+				615D397C2920935C00251211 /* ContactJson.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -282,12 +308,37 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		615D397E2920953100251211 /* Jsons */ = {
+			isa = PBXGroup;
+			children = (
+				615D397F2920955800251211 /* ContactListJson.json */,
+			);
+			path = Jsons;
+			sourceTree = "<group>";
+		};
+		615D398129209AA900251211 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				615D398229209AC500251211 /* Api.swift */,
+				615D39842920A04400251211 /* ApiService.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		615D39882920DF2300251211 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				615D39862920DF0900251211 /* ContactViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		6D0DC53DD92433EBEFED1DA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CFACC464E23C31D7BF4C6496 /* Pods_wechatSwiftUI.framework */,
-				4620BC491E1D3A615F28D0B1 /* Pods_wechatSwiftUI_wechatSwiftUIUITests.framework */,
-				6B5C941C2E3CC928604C8981 /* Pods_wechatSwiftUITests.framework */,
+				D3D5DE42645B8242F40E2A6D /* libPods-wechatSwiftUI.a */,
+				86980E4E88448408C02FEBA3 /* libPods-wechatSwiftUI-wechatSwiftUIUITests.a */,
+				E2672AB783590416B92D447D /* libPods-wechatSwiftUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -399,6 +450,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				615D39802920955800251211 /* ContactListJson.json in Resources */,
 				615D392B291FB04200251211 /* LaunchScreen.storyboard in Resources */,
 				615D3928291FB04200251211 /* Assets.xcassets in Resources */,
 				615D3926291FB04000251211 /* Main.storyboard in Resources */,
@@ -496,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				615D395C291FBC1100251211 /* Discover.swift in Sources */,
+				615D39872920DF0900251211 /* ContactViewModel.swift in Sources */,
 				615D3923291FB04000251211 /* ViewController.swift in Sources */,
 				615D3956291FBA9500251211 /* Chat.swift in Sources */,
 				615D395F291FBC2900251211 /* Mine.swift in Sources */,
@@ -505,14 +558,21 @@
 				615D391F291FB04000251211 /* AppDelegate.swift in Sources */,
 				615D3971291FDEA000251211 /* ChatRoom.swift in Sources */,
 				615D3953291FB44600251211 /* TabBarItemDatable.swift in Sources */,
-				615D396D291FD7F000251211 /* ChatMessage.swift in Sources */,
+				615D396D291FD7F000251211 /* ChatMessageModel.swift in Sources */,
+				615D397D2920935C00251211 /* ContactJson.swift in Sources */,
+				615D39792920926F00251211 /* ContactList.swift in Sources */,
 				615D3921291FB04000251211 /* SceneDelegate.swift in Sources */,
 				615D3966291FD31400251211 /* ChatList.swift in Sources */,
 				615D3964291FD12800251211 /* Separator.swift in Sources */,
+				615D398329209AC500251211 /* Api.swift in Sources */,
 				615D3951291FB35900251211 /* TabBar.swift in Sources */,
+				615D39852920A04400251211 /* ApiService.swift in Sources */,
 				615D396B291FD44100251211 /* ChatModel.swift in Sources */,
 				615D396F291FD87100251211 /* Modelable.swift in Sources */,
 				615D3959291FBBFB00251211 /* Contact.swift in Sources */,
+				615D397B2920934200251211 /* ContactListRow.swift in Sources */,
+				615D398C2920FD3200251211 /* ContactSectionHeader.swift in Sources */,
+				615D398A2920F30D00251211 /* ContactDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
