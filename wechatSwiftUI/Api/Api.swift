@@ -11,6 +11,7 @@ import Moya
 enum Api {
     case chatList
     case contact
+    case discover
     case session_moments(page: Int)
 }
 
@@ -24,6 +25,7 @@ extension Api: TargetType {
         switch self {
         case .chatList: return "api/wechat/chatList"
         case .contact: return "api/wechat/contact"
+        case .discover: return "api/wechat/discover"
         case .session_moments(let page):
             return "api/wechat/session_moments/\(page)"
         }
@@ -33,6 +35,7 @@ extension Api: TargetType {
         switch self {
         case .chatList: return .get
         case .contact: return .get
+        case .discover: return .get
         case .session_moments(_):
             return .post
         }

@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct Discover: View {
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            DiscoverList()
+                .navigationTitle(TabBarItemDatable.discover.title)
+                .navigationBarTitleDisplayMode(.inline)
+                .onAppear(perform: viewAppear)
+                .onDisappear(perform: viewDisappear)
+        }
+    }
+    
+    func viewAppear() {
+        
+    }
+    
+    func viewDisappear() {
+        
     }
 }
 

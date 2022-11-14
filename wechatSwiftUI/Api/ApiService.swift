@@ -56,7 +56,9 @@ struct ApiMock: PluginType {
         var json_name: String = ""
         switch target.path {
         case "api/wechat/contact":
-            json_name = "ContactListJson"
+            json_name = "contact_net_json"
+        case "api/wechat/discover":
+            json_name = "discover_net_json"
         default:
             break
         }
@@ -65,7 +67,9 @@ struct ApiMock: PluginType {
             return result
         }
         
-        guard let url: URL = Bundle.main.url(forResource: json_name, withExtension: "json") else { return result }
+        guard let url: URL = Bundle.main.url(forResource: json_name, withExtension: "json") else {
+            return result
+        }
         
         do {
             let data = try Data(contentsOf: url)
@@ -101,7 +105,7 @@ class ApiService<T, JSON> where T:TargetType, JSON: NetworkJSON {
             do {
                 var urlRequest = try endPoint.urlRequest()
                 // 设置网络超时时间，默认15s
-                urlRequest.timeoutInterval = configuration?.timeoutInterval ?? 5
+                urlRequest.timeoutInterval = configuration?.timeoutInterval ?? 15
                 
                 done(.success(urlRequest))
             } catch  {
@@ -153,7 +157,7 @@ struct ApiServiceConfiguraion {
     
     static let `default` = ApiServiceConfiguraion()
     
-    var timeoutInterval: TimeInterval = 5
+    var timeoutInterval: TimeInterval = 2
     
     
 }

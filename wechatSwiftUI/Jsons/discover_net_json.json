@@ -1,0 +1,87 @@
+{
+    "code": 0,
+    "msg": "请求成功",
+    "data": {
+        "list": [
+            {
+                "id": "1",
+                "rows": [
+                    {
+                        "id": "10",
+                        "icon": "discover_moment",
+                        "title": "朋友圈",
+                        "right_icon": "data_avatar10",
+                    }
+                ]
+            },
+            {
+                "id": "2",
+                "rows": [
+                    {
+                        "id": "20",
+                        "icon": "discover_qrcode",
+                        "title": "扫一扫",
+                        "right_icon": "",
+                    }
+                ]
+            },
+            {
+                "id": "3",
+                "rows": [
+                    {
+                        "id": "32",
+                        "icon": "discover_shop",
+                        "title": "商店",
+                        "right_icon": "",
+                    },
+                    {
+                        "id": "30",
+                        "icon": "discover_see",
+                        "title": "看一看",
+                        "right_icon": "",
+                    },
+                    {
+                        "id": "31",
+                        "icon": "discover_search",
+                        "title": "搜一搜",
+                        "right_icon": "",
+                    }
+                ]
+            },
+            {
+                "id": "4",
+                "rows": [
+                    {
+                        "id": "40",
+                        "icon": "discover_nearby",
+                        "title": "附近",
+                        "right_icon": "",
+                    },
+                    {
+                        "id": "41",
+                        "icon": "discover_shake",
+                        "title": "摇一摇",
+                        "right_icon": "",
+                    }
+                ]
+            },
+            {
+                "id": "5",
+                "rows": [
+                    {
+                        "id": "50",
+                        "icon": "discover_game",
+                        "title": "游戏",
+                        "right_icon": "",
+                    },
+                    {
+                        "id": "51",
+                        "icon": "discover_miniprogram",
+                        "title": "小程序",
+                        "right_icon": "",
+                    }
+                ]
+            }
+        ]
+    }
+}
