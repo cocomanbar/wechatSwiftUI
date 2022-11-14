@@ -41,7 +41,20 @@ struct ContactJson: NetworkJSON {
     var data: ContactJsonData?
 }
 
-
+extension ContactModel {
+    
+    static var newfriends: ContactModel {
+        ContactModel(id: "1000001", letter: nil, user_info: ChatUserModel(avatar: "contact_new_friend", user_name: "新的朋友"))
+    }
+    
+    static var chatroom: ContactModel {
+        ContactModel(id: "1000002", letter: nil, user_info: ChatUserModel(avatar: "contact_chatroom", user_name: "群聊"))
+    }
+    
+    static var chatsign: ContactModel {
+        ContactModel(id: "1000003", letter: nil, user_info: ChatUserModel(avatar: "contact_sign", user_name: "标签"))
+    }
+}
 
 // MARK: - swiftUI Display
 
