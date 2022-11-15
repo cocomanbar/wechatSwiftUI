@@ -1,0 +1,59 @@
+{
+    "code": 0,
+    "msg": "请求成功",
+    "data": {
+        "list": [
+            {
+                "id": "1",
+                "rows": [
+                    {
+                        "id": "10",
+                        "icon": "me_pay",
+                        "title": "服务",
+                        "right_icon": "",
+                    }
+                ]
+            },
+            {
+                "id": "3",
+                "rows": [
+                    {
+                        "id": "32",
+                        "icon": "me_favorite",
+                        "title": "收藏",
+                        "right_icon": "",
+                    },
+                    {
+                        "id": "30",
+                        "icon": "me_photo_album",
+                        "title": "朋友圈",
+                        "right_icon": "",
+                    },
+                    {
+                        "id": "31",
+                        "icon": "me_bank_card",
+                        "title": "卡包",
+                        "right_icon": "",
+                    },
+                    {
+                        "id": "20",
+                        "icon": "me_emoji",
+                        "title": "表情",
+                        "right_icon": "",
+                    }
+                ]
+            },
+            {
+                "id": "4",
+                "rows": [
+                    {
+                        "id": "40",
+                        "icon": "me_setting",
+                        "title": "设置",
+                        "right_icon": "",
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -12,6 +12,7 @@ enum Api {
     case chatList
     case contact
     case discover
+    case mine
     case session_moments(page: Int)
 }
 
@@ -26,6 +27,7 @@ extension Api: TargetType {
         case .chatList: return "api/wechat/chatList"
         case .contact: return "api/wechat/contact"
         case .discover: return "api/wechat/discover"
+        case .mine: return "api/wechat/mine"
         case .session_moments(let page):
             return "api/wechat/session_moments/\(page)"
         }
@@ -36,6 +38,7 @@ extension Api: TargetType {
         case .chatList: return .get
         case .contact: return .get
         case .discover: return .get
+        case .mine: return .get
         case .session_moments(_):
             return .post
         }

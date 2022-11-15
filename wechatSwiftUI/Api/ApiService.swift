@@ -59,6 +59,8 @@ struct ApiMock: PluginType {
             json_name = "contact_net_json"
         case "api/wechat/discover":
             json_name = "discover_net_json"
+        case "api/wechat/mine":
+            json_name = "mine_net_json"
         default:
             break
         }

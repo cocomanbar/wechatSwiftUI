@@ -9,7 +9,20 @@ import SwiftUI
 
 struct Mine: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            MineList()
+        }
+        .navigationBarHidden(true)
+        .onAppear(perform: viewAppear)
+        .onDisappear(perform: viewDisappear)
+    }
+    
+    func viewAppear() {
+        
+    }
+    
+    func viewDisappear() {
+        
     }
 }
 
