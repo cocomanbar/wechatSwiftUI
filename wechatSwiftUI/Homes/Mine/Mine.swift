@@ -9,11 +9,15 @@ import SwiftUI
 
 struct Mine: View {
     var body: some View {
-        NavigationView {
+        ZStack {
+            VStack {
+                Color(.white).frame(height: 300)
+                Color("separator")
+            }
+            
             MineList()
         }
         .showTabBar()
-        .navigationBarHidden(true)
         .onAppear(perform: viewAppear)
         .onDisappear(perform: viewDisappear)
     }

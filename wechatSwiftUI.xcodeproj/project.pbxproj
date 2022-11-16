@@ -67,6 +67,7 @@
 		6172D9D72924E7BB00A78C35 /* MomentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9D62924E7BB00A78C35 /* MomentViewModel.swift */; };
 		6172D9D92924E82200A78C35 /* MomentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9D82924E82200A78C35 /* MomentList.swift */; };
 		6172D9DB2924EAFD00A78C35 /* MomentHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9DA2924EAFD00A78C35 /* MomentHeader.swift */; };
+		6172D9DE2925021100A78C35 /* EnvironmentValues_StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9DD2925021100A78C35 /* EnvironmentValues_StatusBarStyle.swift */; };
 		63342019D5A6A7097F5B4E6F /* libPods-wechatSwiftUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2672AB783590416B92D447D /* libPods-wechatSwiftUITests.a */; };
 		C9A4C484D5B098EE534014C2 /* libPods-wechatSwiftUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D5DE42645B8242F40E2A6D /* libPods-wechatSwiftUI.a */; };
 /* End PBXBuildFile section */
@@ -155,6 +156,7 @@
 		6172D9D62924E7BB00A78C35 /* MomentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentViewModel.swift; sourceTree = "<group>"; };
 		6172D9D82924E82200A78C35 /* MomentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentList.swift; sourceTree = "<group>"; };
 		6172D9DA2924EAFD00A78C35 /* MomentHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentHeader.swift; sourceTree = "<group>"; };
+		6172D9DD2925021100A78C35 /* EnvironmentValues_StatusBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValues_StatusBarStyle.swift; sourceTree = "<group>"; };
 		693375C6F52E04A953F66ACC /* Pods-wechatSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wechatSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-wechatSwiftUI/Pods-wechatSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		86980E4E88448408C02FEBA3 /* libPods-wechatSwiftUI-wechatSwiftUIUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wechatSwiftUI-wechatSwiftUIUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCED876C270413D4952F8B6E /* Pods-wechatSwiftUI-wechatSwiftUIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wechatSwiftUI-wechatSwiftUIUITests.debug.xcconfig"; path = "Target Support Files/Pods-wechatSwiftUI-wechatSwiftUIUITests/Pods-wechatSwiftUI-wechatSwiftUIUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -230,13 +232,14 @@
 			isa = PBXGroup;
 			children = (
 				615D394E291FB0E800251211 /* Files */,
+				615D391E291FB04000251211 /* AppDelegate.swift */,
+				615D3920291FB04000251211 /* SceneDelegate.swift */,
+				6172D9DC292501E500A78C35 /* Environments */,
 				615D398129209AA900251211 /* Api */,
 				615D397E2920953100251211 /* Jsons */,
 				615D3962291FD0B100251211 /* Models */,
 				615D3961291FD09D00251211 /* Extensions */,
 				615D3960291FD07800251211 /* Components */,
-				615D391E291FB04000251211 /* AppDelegate.swift */,
-				615D3920291FB04000251211 /* SceneDelegate.swift */,
 				615D394F291FB11F00251211 /* TabBar */,
 				6172D9C529249F9F00A78C35 /* Homes */,
 				6172D9C429249CD200A78C35 /* Classes */,
@@ -481,6 +484,14 @@
 				6172D9D62924E7BB00A78C35 /* MomentViewModel.swift */,
 			);
 			path = Moment;
+			sourceTree = "<group>";
+		};
+		6172D9DC292501E500A78C35 /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				6172D9DD2925021100A78C35 /* EnvironmentValues_StatusBarStyle.swift */,
+			);
+			path = Environments;
 			sourceTree = "<group>";
 		};
 		6D0DC53DD92433EBEFED1DA9 /* Frameworks */ = {
@@ -737,6 +748,7 @@
 				6172D9D52924DB9C00A78C35 /* MomentJSON.swift in Sources */,
 				6172D9AA29227F7900A78C35 /* Dot.swift in Sources */,
 				6172D9D12924D83800A78C35 /* Moment.swift in Sources */,
+				6172D9DE2925021100A78C35 /* EnvironmentValues_StatusBarStyle.swift in Sources */,
 				615D3951291FB35900251211 /* TabBar.swift in Sources */,
 				615D39852920A04400251211 /* ApiService.swift in Sources */,
 				615D396B291FD44100251211 /* ChatJSON.swift in Sources */,

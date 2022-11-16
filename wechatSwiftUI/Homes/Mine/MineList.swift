@@ -13,34 +13,28 @@ struct MineList: View {
     
     var body: some View {
         ScrollView {
-            ScrollView {
-                LazyVStack(spacing: 0) {
+            LazyVStack(spacing: 0) {
+                Section {
+                    MineHeader()
+                        .padding(.top, 50)
+                    SpaceHolder()
+                        .frame(height: 8)
+                }
+                .background(.white)
+                
+                ForEach(viewModel.list) { listModel in
                     Section {
-                        SpaceHolder(color: .white)
-                            .frame(height: 500)
-                        MineHeader()
-                        SpaceHolder()
-                            .frame(height: 8)
-                    }
-                    .background(.white)
-                    
-                    ForEach(viewModel.list) { listModel in
-                        Section {
-                            ForEach(listModel.rows ?? []) { row in
-                                wrapLink(model: row)
-                                Separator()
-                                    .padding(.leading, 76)
-                            }
+                        ForEach(listModel.rows ?? []) { row in
+                            wrapLink(model: row)
+                            Separator()
+                                .padding(.leading, 76)
                         }
-                        SpaceHolder()
-                            .frame(height: 8)
                     }
+                    SpaceHolder()
+                        .frame(height: 8)
                 }
             }
-            .offset(x: 0, y: -450)
         }
-        .background(Color("separator"))
-//        .fixedSize(horizontal: false, vertical: true)
     }
     
     // 包装解决cell 右边箭头 → 问题
