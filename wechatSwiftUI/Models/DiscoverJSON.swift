@@ -1,5 +1,5 @@
 //
-//  DiscoverJson.swift
+//  DiscoverJSON.swift
 //  wechatSwiftUI
 //
 //  Created by tanxl on 2022/11/14.
@@ -22,16 +22,16 @@ struct DiscoverListModel: Identifiable, HandyJSON {
     var rows: [DiscoverItemModel]?
 }
 
-struct DiscoverJsonData: HandyJSON {
+struct DiscoverJSONData: HandyJSON {
     var list: [DiscoverListModel]?
 }
 
-struct DiscoverJson: NetworkJSON {
-    typealias Data = DiscoverJsonData
+struct DiscoverJSON: NetworkJSON {
+    typealias Data = DiscoverJSONData
     
     var code: Int = .max
     var msg: String = ""
-    var data: DiscoverJsonData?
+    var data: DiscoverJSONData?
 }
 
 

@@ -12,20 +12,20 @@ import HandyJSON
 
 class DiscoverViewModel: ObservableObject {
     
-    @Published var discoverList: [DiscoverListModel] = []
+    @Published var list: [DiscoverListModel] = []
     
     init() {
-        requestDiscovers()
+        requestLists()
     }
     
-    func requestDiscovers() {
+    func requestLists() {
         
-        ApiService<Api, DiscoverJson>.request(target: .discover, success: { [weak self] json in
+        ApiService<Api, DiscoverJSON>.request(target: .discover_list, success: { [weak self] json in
             guard let self = self else { return }
-            self.discoverList = json.data?.list ?? []
+            self.list = json.data?.list ?? []
         }, failure: { [weak self] error in
             guard let self = self else { return }
-            self.discoverList = []
+            self.list = []
         })
     }
 }

@@ -15,7 +15,7 @@ struct DiscoverList: View {
         
         ScrollView {
             LazyVStack(spacing: 0) {
-                ForEach(viewModel.discoverList) { listModel in
+                ForEach(viewModel.list) { listModel in
                     Group {
                         ForEach(listModel.rows ?? []) { model in
                             wrapLink(model: model)

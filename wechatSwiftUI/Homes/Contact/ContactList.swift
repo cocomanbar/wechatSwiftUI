@@ -14,12 +14,12 @@ struct ContactList: View {
     var body: some View {
         ZStack {
             Text("加载中..")
-                .opacity(viewModel.contactList.count > 0 ? 0: 1)
+                .opacity(viewModel.list.count > 0 ? 0: 1)
             
             List() {
                 Group {
                     Section {
-                        if viewModel.contactList.count > 0 {
+                        if viewModel.list.count > 0 {
                             SearchBar()
                             wrapNavigationLink(contact: ContactModel.newfriends)
                             wrapNavigationLink(contact: ContactModel.chatroom)
@@ -27,7 +27,7 @@ struct ContactList: View {
                         }
                     }
 
-                    ForEach(viewModel.contactList) { contact in
+                    ForEach(viewModel.list) { contact in
                         Section.init(header: ContactSectionHeader(letter: contact.letter ?? "")) {
                             ForEach(contact.rows ?? []) { contactModel in
                                 wrapNavigationLink(contact: contactModel)
@@ -38,7 +38,7 @@ struct ContactList: View {
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 .listSectionSeparator(.hidden)
             }
-            .id(viewModel.contactList.count)
+            .id(viewModel.list.count)
             .listStyle(.plain)
         }
     }
@@ -60,13 +60,13 @@ extension ContactModel {
         var destination: AnyView
         switch Int(id ?? "0") {
         case 1000001:
-            destination = AnyView(ContactFriend())
+            destination = AnyView(AddFriend())
         case 1000002:
-            destination = AnyView(ContactListRoom())
+            destination = AnyView(GroupRoomList())
         case 1000003:
-            destination = AnyView(ContactFriendTag())
+            destination = AnyView(FriendTag())
         default :
-            destination = AnyView(ContactDetail())
+            destination = AnyView(ChatRoom())
         }
         return destination
     }

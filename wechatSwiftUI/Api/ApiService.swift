@@ -39,7 +39,7 @@ struct NetworkEmptyData: HandyJSON {
     init() {}
 }
 
-struct NetworkEmptyJSON {
+struct NetworkEmptyJSON: NetworkJSON {
     typealias Data = NetworkEmptyData
     
     var code: Int = .max
@@ -53,19 +53,7 @@ struct ApiMock: PluginType {
     
     func process(_ result: Result<Moya.Response, MoyaError>, target: TargetType) -> Result<Moya.Response, MoyaError> {
         
-        var json_name: String = ""
-        switch target.path {
-        case "api/wechat/contact":
-            json_name = "contact_net_json"
-        case "api/wechat/discover":
-            json_name = "discover_net_json"
-        case "api/wechat/mine":
-            json_name = "mine_net_json"
-        default:
-            break
-        }
-        
-        guard json_name.isEmpty == false else {
+        guard let json_name = Api.mockJSON(path: target.path) else {
             return result
         }
         

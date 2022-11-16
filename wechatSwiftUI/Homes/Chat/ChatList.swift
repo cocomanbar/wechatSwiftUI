@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChatList: View {
     
-    @State private var chatList: [ChatModel] = []
+    @ObservedObject var viewModel: ChatViewModel = ChatViewModel()
     
     var body: some View {
         
@@ -18,8 +18,8 @@ struct ChatList: View {
             
             LazyVStack(spacing: 0) {
                 
-                ForEach(chatList) { chat in
-                    NavigationLink(destination: ChatRoom(chat: chat)) {
+                ForEach(viewModel.list) { chat in
+                    NavigationLink(destination: ChatRoom()) {
                         ChatRow(model: chat)
                     }
                     Separator().padding(.leading, 76)
@@ -27,14 +27,11 @@ struct ChatList: View {
             }
             .background(Color("cell"))
         }
-        .onAppear(perform: load)
+        .onAppear(perform: viewAppear)
     }
     
-    func load() {
-        guard chatList.isEmpty else {
-            return
-        }
-        chatList = ChatModel.swiftDisplayModels
+    func viewAppear() {
+        
     }
 }
 

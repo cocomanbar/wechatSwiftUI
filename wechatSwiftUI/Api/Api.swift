@@ -9,11 +9,36 @@ import Foundation
 import Moya
 
 enum Api {
-    case chatList
-    case contact
-    case discover
-    case mine
+    case chat_list
+    case contact_list
+    case discover_list
+    case mine_list
+    
     case session_moments(page: Int)
+    
+    struct ApiPath {
+        static let chat_list = "api/wechat/chat_list"
+        static let contact_list = "api/wechat/contact_list"
+        static let discover_list = "api/wechat/discover_list"
+        static let mine_list = "api/wechat/mine_list"
+    }
+    
+    static func mockJSON(path: String) -> String? {
+        var json_name: String?
+        switch path {
+        case ApiPath.chat_list:
+            json_name = "chat_list_net_json"
+        case ApiPath.contact_list:
+            json_name = "contact_list_net_json"
+        case ApiPath.discover_list:
+            json_name = "discover_list_net_json"
+        case ApiPath.mine_list:
+            json_name = "mine_list_net_json"
+        default:
+            break
+        }
+        return json_name
+    }
 }
 
 extension Api: TargetType {
@@ -24,21 +49,20 @@ extension Api: TargetType {
     
     var path: String {
         switch self {
-        case .chatList: return "api/wechat/chatList"
-        case .contact: return "api/wechat/contact"
-        case .discover: return "api/wechat/discover"
-        case .mine: return "api/wechat/mine"
-        case .session_moments(let page):
-            return "api/wechat/session_moments/\(page)"
+        case .chat_list: return Api.ApiPath.chat_list
+        case .contact_list: return Api.ApiPath.contact_list
+        case .discover_list: return Api.ApiPath.discover_list
+        case .mine_list: return Api.ApiPath.mine_list
+        case .session_moments(let page): return "api/wechat/session_moments/\(page)"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .chatList: return .get
-        case .contact: return .get
-        case .discover: return .get
-        case .mine: return .get
+        case .chat_list: return .get
+        case .contact_list: return .get
+        case .discover_list: return .get
+        case .mine_list: return .get
         case .session_moments(_):
             return .post
         }

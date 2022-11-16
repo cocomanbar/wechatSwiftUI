@@ -11,20 +11,20 @@ import Combine
 
 class ContactViewModel: ObservableObject {
     
-    @Published var contactList: [ContactListModel] = []
+    @Published var list: [ContactListModel] = []
     
     init() {
-        requestContacts()
+        requestLists()
     }
     
-    func requestContacts() {
+    func requestLists() {
         
-        ApiService<Api, ContactJson>.request(target: .contact, success: { [weak self] json in
+        ApiService<Api, ContactJSON>.request(target: .contact_list, success: { [weak self] json in
             guard let self = self else { return }
-            self.contactList = json.data?.list ?? []
+            self.list = json.data?.list ?? []
         }, failure: { [weak self] error in
             guard let self = self else { return }
-            self.contactList = []
+            self.list = []
         })
     }
 }

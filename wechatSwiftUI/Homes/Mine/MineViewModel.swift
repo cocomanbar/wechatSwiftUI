@@ -20,7 +20,7 @@ class MineViewModel: ObservableObject {
     
     func requestLists() {
         
-        ApiService<Api, MineJson>.request(target: .mine, success: { [weak self] json in
+        ApiService<Api, MineJSON>.request(target: .mine_list, success: { [weak self] json in
             guard let self = self else { return }
             self.list = json.data?.list ?? []
         }, failure: { [weak self] error in

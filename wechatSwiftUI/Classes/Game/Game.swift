@@ -10,6 +10,7 @@ import SwiftUI
 struct Game: View {
     var body: some View {
         Text("Hello, World! Game")
+            .hiddenTabBar()
     }
 }
 

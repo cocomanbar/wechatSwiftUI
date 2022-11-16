@@ -1,5 +1,5 @@
 //
-//  ContactModel.swift
+//  ContactJSON.swift
 //  wechatSwiftUI
 //
 //  Created by tanxl on 2022/11/13.
@@ -29,16 +29,16 @@ struct ContactListModel: Identifiable, HandyJSON {
     var rows: [ContactModel]?
 }
 
-struct ContactJsonData: HandyJSON {
+struct ContactJSONData: HandyJSON {
     var list: [ContactListModel]?
 }
 
-struct ContactJson: NetworkJSON {
-    typealias Data = ContactJsonData
+struct ContactJSON: NetworkJSON {
+    typealias Data = ContactJSONData
     
     var code: Int = .max
     var msg: String = ""
-    var data: ContactJsonData?
+    var data: ContactJSONData?
 }
 
 extension ContactModel {
