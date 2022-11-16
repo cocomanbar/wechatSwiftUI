@@ -12,6 +12,7 @@ struct Mine: View {
         NavigationView {
             MineList()
         }
+        .showTabBar()
         .navigationBarHidden(true)
         .onAppear(perform: viewAppear)
         .onDisappear(perform: viewDisappear)

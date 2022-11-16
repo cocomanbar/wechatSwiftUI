@@ -14,13 +14,15 @@ enum Api {
     case discover_list
     case mine_list
     
-    case session_moments(page: Int)
+    case moment_list(page: Int)
     
     struct ApiPath {
         static let chat_list = "api/wechat/chat_list"
         static let contact_list = "api/wechat/contact_list"
         static let discover_list = "api/wechat/discover_list"
         static let mine_list = "api/wechat/mine_list"
+        
+        static let moment_list = "api/wechat/moment_list"
     }
     
     static func mockJSON(path: String) -> String? {
@@ -34,6 +36,8 @@ enum Api {
             json_name = "discover_list_net_json"
         case ApiPath.mine_list:
             json_name = "mine_list_net_json"
+        case ApiPath.moment_list:
+            json_name = "moment_list_net_json"
         default:
             break
         }
@@ -53,7 +57,7 @@ extension Api: TargetType {
         case .contact_list: return Api.ApiPath.contact_list
         case .discover_list: return Api.ApiPath.discover_list
         case .mine_list: return Api.ApiPath.mine_list
-        case .session_moments(let page): return "api/wechat/session_moments/\(page)"
+        case .moment_list(_): return Api.ApiPath.moment_list
         }
     }
     
@@ -63,14 +67,14 @@ extension Api: TargetType {
         case .contact_list: return .get
         case .discover_list: return .get
         case .mine_list: return .get
-        case .session_moments(_):
+        case .moment_list(_):
             return .post
         }
     }
     
     var task: Moya.Task {
         switch self {
-        case .session_moments(let page):
+        case .moment_list(let page):
             return .requestParameters(parameters: ["page": "\(page)"], encoding: URLEncoding.default)
         default :
             return .requestPlain

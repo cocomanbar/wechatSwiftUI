@@ -11,6 +11,7 @@ struct Contact: View {
     var body: some View {
         NavigationView {
             ContactList()
+                .showTabBar()
                 .navigationTitle(TabBarItemDatable.contact.title)
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(trailing: Trailing())

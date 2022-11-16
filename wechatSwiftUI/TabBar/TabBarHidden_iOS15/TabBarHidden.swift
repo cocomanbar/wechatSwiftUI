@@ -26,48 +26,68 @@ extension UIView {
 }
 
 struct TabBarModifier {
-    static func showTabBar() {
+    static func showTabBar(_ animate: Bool = true) {
         UIApplication.shared.key?.allSubView().forEach({ subView in
-            if let view = subView as? UITabBar {
+            if let view = subView as? UITabBar, view.isHidden == true {
                 view.isHidden = false
+                var rect = view.frame
+                rect.origin.y -= view.frame.height
+                UIView.animate(withDuration: 0.25) {
+                    view.frame = rect
+                } completion: { finished in
+                }
             }
         })
     }
     
-    static func hideTabBar() {
+    static func hideTabBar(_ animate: Bool = true) {
         UIApplication.shared.key?.allSubView().forEach({ subView in
-            if let view = subView as? UITabBar {
-                view.isHidden = true
+            if let view = subView as? UITabBar, view.isHidden == false {
+                var rect = view.frame
+                rect.origin.y += view.frame.height
+                UIView.animate(withDuration: 0.25) {
+                    view.frame = rect
+                } completion: { finished in
+                    view.isHidden = true
+                }
             }
         })
     }
 }
 
 struct ShowTabBar: ViewModifier {
+    var animate: Bool = true
     func body(content: Content) -> some View {
         return content.padding(.zero).onAppear {
-            TabBarModifier.showTabBar()
+            TabBarModifier.showTabBar(animate)
         }
+    }
+    init(animate: Bool) {
+        self.animate = animate
     }
 }
 
 struct HiddenTabBar: ViewModifier {
+    var animate: Bool = true
     func body(content: Content) -> some View {
         return content.padding(.zero).onAppear {
-            TabBarModifier.hideTabBar()
+            TabBarModifier.hideTabBar(animate)
         }
+    }
+    init(animate: Bool) {
+        self.animate = animate
     }
 }
 
 extension View {
     
     @discardableResult
-    func showTabBar() -> some View {
-        return self.modifier(ShowTabBar())
+    func showTabBar(_ animate: Bool = true) -> some View {
+        return self.modifier(ShowTabBar(animate: animate))
     }
 
     @discardableResult
-    func hiddenTabBar() -> some View {
-        return self.modifier(HiddenTabBar())
+    func hiddenTabBar(_ animate: Bool = true) -> some View {
+        return self.modifier(HiddenTabBar(animate: animate))
     }
 }

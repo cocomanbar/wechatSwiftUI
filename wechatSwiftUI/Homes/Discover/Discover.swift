@@ -12,6 +12,7 @@ struct Discover: View {
     var body: some View {
         NavigationView {
             DiscoverList()
+                .showTabBar()
                 .navigationTitle(TabBarItemDatable.discover.title)
                 .navigationBarTitleDisplayMode(.inline)
                 .onAppear(perform: viewAppear)

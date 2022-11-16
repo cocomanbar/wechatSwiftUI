@@ -21,7 +21,7 @@ enum ChatMessageType {
 
 struct ChatMessageModel {
     
-    var user_info: ChatUserModel
+    var user_info: UserModel
     var messageType: ChatMessageType
     var message: MessageModel
 }

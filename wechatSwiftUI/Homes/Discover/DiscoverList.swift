@@ -48,8 +48,8 @@ extension DiscoverItemModel {
     fileprivate var detailView: AnyView {
         var item: AnyView
         switch id {
-        case "":
-            item = AnyView(Game())
+        case "10":
+            item = AnyView(Moment())
             break
         default :
             item = AnyView(Game())

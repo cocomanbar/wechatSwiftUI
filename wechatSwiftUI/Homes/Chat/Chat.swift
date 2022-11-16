@@ -11,6 +11,7 @@ struct Chat: View {
     var body: some View {
         NavigationView {
             ChatList()
+            .showTabBar()
             .navigationTitle(TabBarItemDatable.chat.title)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(leading: Leading(), trailing: Trailing())

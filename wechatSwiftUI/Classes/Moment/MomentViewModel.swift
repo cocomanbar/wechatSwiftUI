@@ -1,17 +1,17 @@
 //
-//  MineViewModel.swift
+//  MomentViewModel.swift
 //  wechatSwiftUI
 //
-//  Created by tanxl on 2022/11/15.
+//  Created by tanxl on 2022/11/16.
 //
 
 import Foundation
 import SwiftUI
 import Combine
 
-class MineViewModel: ObservableObject {
+class MomentViewModel: ObservableObject {
     
-    @Published var list: [DiscoverListModel] = []
+    @Published var list: [MomentModel] = []
     
     init() {
         requestLists()
@@ -19,7 +19,7 @@ class MineViewModel: ObservableObject {
     
     func requestLists() {
         
-        ApiService<Api, MineJSON>.request(target: .mine_list, success: { [weak self] json in
+        ApiService<Api, MomentJSON>.request(target: .moment_list(page: 1), success: { [weak self] json in
             guard let self = self else { return }
             self.list = json.data?.list ?? []
         }, failure: { [weak self] error in
@@ -28,4 +28,5 @@ class MineViewModel: ObservableObject {
         })
     }
 }
+
 

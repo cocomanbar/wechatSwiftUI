@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 import HandyJSON
 
-struct ChatUserModel: HandyJSON {
-    
+struct UserModel: HandyJSON {
+    var id: String?
     var avatar: String?
     var user_name: String?
 }
@@ -19,7 +19,7 @@ struct ContactModel: Identifiable, HandyJSON {
     
     var id: String?
     var letter: String?
-    var user_info: ChatUserModel?
+    var user_info: UserModel?
 }
 
 struct ContactListModel: Identifiable, HandyJSON {
@@ -44,15 +44,15 @@ struct ContactJSON: NetworkJSON {
 extension ContactModel {
     
     static var newfriends: ContactModel {
-        ContactModel(id: "1000001", letter: nil, user_info: ChatUserModel(avatar: "contact_new_friend", user_name: "新的朋友"))
+        ContactModel(id: "1000001", letter: nil, user_info: UserModel(avatar: "contact_new_friend", user_name: "新的朋友"))
     }
     
     static var chatroom: ContactModel {
-        ContactModel(id: "1000002", letter: nil, user_info: ChatUserModel(avatar: "contact_chatroom", user_name: "群聊"))
+        ContactModel(id: "1000002", letter: nil, user_info: UserModel(avatar: "contact_chatroom", user_name: "群聊"))
     }
     
     static var chatsign: ContactModel {
-        ContactModel(id: "1000003", letter: nil, user_info: ChatUserModel(avatar: "contact_sign", user_name: "标签"))
+        ContactModel(id: "1000003", letter: nil, user_info: UserModel(avatar: "contact_sign", user_name: "标签"))
     }
 }
 
@@ -62,7 +62,7 @@ extension ContactModel: Modelable {
     typealias Model = ContactModel
     
     static var swiftDisplayModel: ContactModel {
-        ContactModel(id: "1", letter: "A", user_info: ChatUserModel(avatar: "data_avatar1", user_name: "李晓明"))
+        ContactModel(id: "1", letter: "A", user_info: UserModel(avatar: "data_avatar1", user_name: "李晓明"))
     }
     
     static var swiftDisplayModels: [ContactModel] {
