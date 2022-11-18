@@ -18,7 +18,7 @@ struct Moment: View {
             ZStack {
                 VStack {
                     Color.black
-                        .frame(height: 500)
+                        .frame(height: 300)
                     Spacer()
                 }
                 MomentList()

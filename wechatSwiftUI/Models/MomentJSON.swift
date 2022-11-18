@@ -14,20 +14,20 @@ enum MomentType: Int, HandyJSONEnum {
     case adver = 1
 }
 
-struct MomentPicture {
+struct MomentPicture: HandyJSON, Identifiable {
+    var id: String?
     var pic: String?
-    var w: Int?
-    var h: Int?
+    var w: Float = 0
+    var h: Float = 0
 }
 
-struct MomentLike {
+struct MomentLike: HandyJSON {
     var id: String?
     var avatar: Int?
     var user_name: Int?
 }
 
-
-struct MomentModel: HandyJSON {
+struct MomentModel: HandyJSON, Identifiable {
     
     var id: String?
     var user_info: UserModel?

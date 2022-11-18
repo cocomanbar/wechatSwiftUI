@@ -9,26 +9,27 @@ import SwiftUI
 
 struct MomentList: View {
     
+    @ObservedObject var viewModel: MomentViewModel = MomentViewModel()
+    
     var body: some View {
         ScrollView {
-            LazyVStack (spacing: 500) {
+            LazyVStack (spacing: 0) {
                 
                 MomentHeader()
+                    .frame(maxWidth: .infinity)
                     .anchorPreference(key: Moment.NavigationKey.self, value: .bottom) { anchor in
                         [anchor]
                     }
                 
-                Button("点击返回") {
-                    self.presentationMode.wrappedValue.dismiss()
+                Section {
+                    ForEach(viewModel.list) { model in
+                        MomentRow(model: model)
+                    }
                 }
+                .background(.white)   
             }
         }
     }
-    
-    
-    
-    // Use isPresented or dismiss
-    @Environment(\.presentationMode) var presentationMode
 }
 
 
