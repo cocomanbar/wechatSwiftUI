@@ -66,15 +66,15 @@ extension SceneDelegate {
         // 导航栏样式
         UINavigationBar.appearance().backIndicatorImage = backImage
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = backImage
-        //UINavigationBar.appearance().shadowImage = UIImage()
-        //UINavigationBar.appearance().tintColor = UIColor(named: "navigation_tint")
-        //UINavigationBar.appearance().barTintColor = UIColor(named: "navigation_bar_tint")
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().tintColor = UIColor(named: "navigation_tint")
+        UINavigationBar.appearance().barTintColor = UIColor(named: "navigation_bar_tint")
         
         if #available(iOS 15.0, *) {
             // 避免 iOS15 的默认行为导致 NavigationBar 没有背景色
             let navigationBarAppearance = UINavigationBarAppearance()
             navigationBarAppearance.configureWithDefaultBackground()
-            navigationBarAppearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)
+            navigationBarAppearance.setBackIndicatorImage(backImage, transitionMaskImage: nil)
             UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
             
             // 避免 iOS15 的默认行为导致 TabBar 没有背景色

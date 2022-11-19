@@ -50,7 +50,8 @@ extension DiscoverItemModel {
         switch id {
         case "10":
             item = AnyView(Moment())
-            break
+        case "80":
+            item = AnyView(TestRoom())
         default :
             item = AnyView(Game())
         }
