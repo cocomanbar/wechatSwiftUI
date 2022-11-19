@@ -37,6 +37,9 @@ struct TestRoom: View {
         switch model.title {
         case TestModel.State:
             view = AnyView(TestRoomState(title: model.title))
+        case TestModel.Binding:
+            view = AnyView(TestRoomBinding(title: model.title))
+            
             
         default :
             view = AnyView(TestRoomState())
