@@ -21,12 +21,14 @@ struct Discover: View {
     }
     
     func viewAppear() {
-        
+        navigationShadowImage.shadowImage = nil
     }
     
     func viewDisappear() {
         
     }
+    
+    @Environment(\.navigationShadowImage) var navigationShadowImage
 }
 
 struct Discover_Previews: PreviewProvider {

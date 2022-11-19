@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 import SwiftUI
 
 /// SwiftUI使用Environment来传递系统范围的设置，例如ContentSizeCategory，LayoutDirection，ColorScheme等。
@@ -40,6 +41,15 @@ import SwiftUI
 ///         }
 ///     }
 
+
+
+// MARK: - 以下这种方式更新 `statusBarStyle`
+/// 需要info 添加两个key
+/// `UIViewControllerBasedStatusBarAppearance` = NO 禁止启用新方式
+/// `UIStatusBarStyle` 默认的设置 `UIStatusBarStyleLightContent` / `UIStatusBarStyleDefault`
+/// 否则需要通过HostController 桥接到控制器实现，比较麻烦些
+
+
 extension EnvironmentValues {
     
     var statusBarStyle: StatusBarStyle { self[StatusBarStyle.Key.self] }
@@ -47,9 +57,11 @@ extension EnvironmentValues {
 
 class StatusBarStyle {
     
-    var getter: () -> UIStatusBarStyle = { .default }
-    var setter: (UIStatusBarStyle) -> Void = { _ in }
-
+    var getter: () -> UIStatusBarStyle = { UIApplication.shared.statusBarStyle }
+    var setter: (UIStatusBarStyle) -> Void = { value in
+        UIApplication.shared.statusBarStyle = value
+    }
+    
     var current: UIStatusBarStyle {
         get { self.getter() }
         set { self.setter(newValue) }
@@ -59,47 +71,8 @@ class StatusBarStyle {
 extension StatusBarStyle {
     
     struct Key: EnvironmentKey {
+        typealias Value = StatusBarStyle
         static let defaultValue: StatusBarStyle = StatusBarStyle()
     }
 }
-
-
-//struct StatusBarStyleKey: EnvironmentKey {
-//
-//    typealias Value = UIStatusBarStyle
-//    static var defaultValue: UIStatusBarStyle = .default
-//}
-//
-//extension EnvironmentValues {
-//
-//    var statusBarStyle: UIStatusBarStyle {
-//        get { self[StatusBarStyleKey.self] }
-//        set { self[StatusBarStyleKey.self] = newValue }
-//    }
-//}
-//
-////extension EnvironmentValues {
-////
-////    var statusBarStyle: StatusBarStyle {
-////        self[StatusBarStyle.Key.self]
-////    }
-////}
-//
-//class StatusBarStyle {
-//
-//    fileprivate var statusStyle: UIStatusBarStyle = .default
-//
-//    fileprivate struct Key: EnvironmentKey {
-//        static var defaultValue: StatusBarStyle = StatusBarStyle()
-//    }
-//
-//    var current: UIStatusBarStyle {
-//        get {
-//            statusStyle
-//        }
-//        set {
-//            statusStyle = newValue
-//        }
-//    }
-//}
 

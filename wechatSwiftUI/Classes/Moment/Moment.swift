@@ -40,7 +40,7 @@ struct Moment: View {
     
     func viewAppear() {
         // 进入时设置回 `lightContent`
-        // self.statusBarStyle.current = .lightContent
+         self.statusBarStyle.current = .lightContent
     }
     
     func viewDisappear() {
