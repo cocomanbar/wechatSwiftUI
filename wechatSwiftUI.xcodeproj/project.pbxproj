@@ -74,6 +74,9 @@
 		6172D9E82928702B00A78C35 /* TestRoomState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9E72928702B00A78C35 /* TestRoomState.swift */; };
 		6172D9EB2928950400A78C35 /* TestRoomBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9EA2928950400A78C35 /* TestRoomBinding.swift */; };
 		6172D9EE2928ADF500A78C35 /* TestRoomPublish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9ED2928ADF500A78C35 /* TestRoomPublish.swift */; };
+		6172D9F12928BC8C00A78C35 /* TestRoomLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9F02928BC8C00A78C35 /* TestRoomLocalization.swift */; };
+		6172DA042929E65E00A78C35 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172DA032929E65E00A78C35 /* Language.swift */; };
+		6172DA072929E84D00A78C35 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6172DA092929E84D00A78C35 /* Localizable.strings */; };
 		63342019D5A6A7097F5B4E6F /* libPods-wechatSwiftUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2672AB783590416B92D447D /* libPods-wechatSwiftUITests.a */; };
 		C9A4C484D5B098EE534014C2 /* libPods-wechatSwiftUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D5DE42645B8242F40E2A6D /* libPods-wechatSwiftUI.a */; };
 /* End PBXBuildFile section */
@@ -169,6 +172,11 @@
 		6172D9E72928702B00A78C35 /* TestRoomState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRoomState.swift; sourceTree = "<group>"; };
 		6172D9EA2928950400A78C35 /* TestRoomBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRoomBinding.swift; sourceTree = "<group>"; };
 		6172D9ED2928ADF500A78C35 /* TestRoomPublish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRoomPublish.swift; sourceTree = "<group>"; };
+		6172D9F02928BC8C00A78C35 /* TestRoomLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRoomLocalization.swift; sourceTree = "<group>"; };
+		6172DA032929E65E00A78C35 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		6172DA082929E84D00A78C35 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6172DA0B2929E85400A78C35 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6172DA0C2929ED2A00A78C35 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		693375C6F52E04A953F66ACC /* Pods-wechatSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wechatSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-wechatSwiftUI/Pods-wechatSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		86980E4E88448408C02FEBA3 /* libPods-wechatSwiftUI-wechatSwiftUIUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wechatSwiftUI-wechatSwiftUIUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCED876C270413D4952F8B6E /* Pods-wechatSwiftUI-wechatSwiftUIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wechatSwiftUI-wechatSwiftUIUITests.debug.xcconfig"; path = "Target Support Files/Pods-wechatSwiftUI-wechatSwiftUIUITests/Pods-wechatSwiftUI-wechatSwiftUIUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -243,6 +251,7 @@
 		615D391D291FB04000251211 /* wechatSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				6172D9F62929D3AB00A78C35 /* Localization */,
 				615D394E291FB0E800251211 /* Files */,
 				615D391E291FB04000251211 /* AppDelegate.swift */,
 				615D3920291FB04000251211 /* SceneDelegate.swift */,
@@ -512,6 +521,7 @@
 		6172D9E32928653200A78C35 /* TestRoom */ = {
 			isa = PBXGroup;
 			children = (
+				6172D9EF2928BC7900A78C35 /* Localization */,
 				6172D9EC2928ADDE00A78C35 /* Published */,
 				6172D9E9292894EA00A78C35 /* Binding */,
 				6172D9E62928701100A78C35 /* State */,
@@ -542,6 +552,23 @@
 				6172D9ED2928ADF500A78C35 /* TestRoomPublish.swift */,
 			);
 			path = Published;
+			sourceTree = "<group>";
+		};
+		6172D9EF2928BC7900A78C35 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				6172D9F02928BC8C00A78C35 /* TestRoomLocalization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		6172D9F62929D3AB00A78C35 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				6172DA032929E65E00A78C35 /* Language.swift */,
+				6172DA092929E84D00A78C35 /* Localizable.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		6D0DC53DD92433EBEFED1DA9 /* Frameworks */ = {
@@ -643,6 +670,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				ja,
 			);
 			mainGroup = 615D3912291FB04000251211;
 			productRefGroup = 615D391C291FB04000251211 /* Products */;
@@ -667,6 +696,7 @@
 				615D392B291FB04200251211 /* LaunchScreen.storyboard in Resources */,
 				615D3928291FB04200251211 /* Assets.xcassets in Resources */,
 				6172D9BE2923C65400A78C35 /* mine_list_net_json.json in Resources */,
+				6172DA072929E84D00A78C35 /* Localizable.strings in Resources */,
 				615D3926291FB04000251211 /* Main.storyboard in Resources */,
 				6172D9CC2924C28600A78C35 /* chat_list_net_json.json in Resources */,
 			);
@@ -784,7 +814,9 @@
 				615D3971291FDEA000251211 /* ChatRoom.swift in Sources */,
 				615D3953291FB44600251211 /* TabBarItemDatable.swift in Sources */,
 				615D396D291FD7F000251211 /* ChatMessageModel.swift in Sources */,
+				6172D9F12928BC8C00A78C35 /* TestRoomLocalization.swift in Sources */,
 				6172D9D92924E82200A78C35 /* MomentList.swift in Sources */,
+				6172DA042929E65E00A78C35 /* Language.swift in Sources */,
 				6172D9DB2924EAFD00A78C35 /* MomentHeader.swift in Sources */,
 				615D397D2920935C00251211 /* ContactJSON.swift in Sources */,
 				6172D9E02926759300A78C35 /* MomentRow.swift in Sources */,
@@ -869,6 +901,16 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		6172DA092929E84D00A78C35 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6172DA082929E84D00A78C35 /* en */,
+				6172DA0B2929E85400A78C35 /* ja */,
+				6172DA0C2929ED2A00A78C35 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -876,6 +918,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -936,6 +979,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

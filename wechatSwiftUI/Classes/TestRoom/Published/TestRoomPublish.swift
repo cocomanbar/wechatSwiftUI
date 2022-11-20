@@ -34,6 +34,7 @@ struct TestRoomPublish: View {
             Text("Hello, World! waiting after = \(pusher.finied) ")
             Spacer()
         }
+        .navigationTitle(title)
         .onAppear( perform: pusher.done )
     }
 }
