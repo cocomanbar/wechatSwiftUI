@@ -71,8 +71,14 @@
                     {
                         "id": "80",
                         "icon": "discover_test",
-                        "title": "实验室",
-                        "right_icon": "discover_baby",
+                        "title": "包装室",
+                        "right_icon": "",
+                    },
+                    {
+                        "id": "81",
+                        "icon": "discover_baby",
+                        "title": "功能室",
+                        "right_icon": "",
                     }
                 ]
             },

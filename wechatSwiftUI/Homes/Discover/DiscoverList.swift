@@ -52,6 +52,8 @@ extension DiscoverItemModel {
             item = AnyView(Moment())
         case "80":
             item = AnyView(TestRoom())
+        case "81":
+            item = AnyView(FunRoom())
         default :
             item = AnyView(Game())
         }
