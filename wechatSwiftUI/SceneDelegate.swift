@@ -10,6 +10,7 @@ import SwiftUI
 
 /// SwiftUI Example
 /// https://github.com/jaywcjlove/swiftui-example
+/// https://developer.apple.com/documentation/swiftui/app-organization
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?

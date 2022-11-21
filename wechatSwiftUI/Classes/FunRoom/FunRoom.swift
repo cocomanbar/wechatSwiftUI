@@ -36,7 +36,9 @@ struct FunRoom: View {
         var view: AnyView
         switch model.title {
         case TestModel.Language:
-            view = AnyView(TestRoomLocalization(title: model.title))
+            view = AnyView(FunRoomLocalization(title: model.title))
+        case TestModel.Lottie:
+            view = AnyView(FunRoomLottie(title: model.title))
             
         default :
             view = AnyView(TestRoomState())
@@ -58,13 +60,14 @@ extension TestModel {
     static var swiftDisplayModels2: [TestModel] {
         [
             TestModel(id: "1", title: TestModel.Language, description: "关于\n \(TestModel.Language) 多语言环境切换 \n的例子"),
-            
+            TestModel(id: "2", title: TestModel.Lottie, description: "关于\n \(TestModel.Lottie) 动画 \n的例子"),
         ]
     }
 }
 
 extension TestModel {
     
-    static let Language = "@Language"
+    static let Language = "Language"
+    static let Lottie = "Lottie"
 }
 

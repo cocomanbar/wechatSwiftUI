@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		437DA2A9798C1287624D1CFB /* libPods-wechatSwiftUI-wechatSwiftUIUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86980E4E88448408C02FEBA3 /* libPods-wechatSwiftUI-wechatSwiftUIUITests.a */; };
 		615C5A59292BA3D500202BC4 /* TestRoomGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615C5A58292BA3D500202BC4 /* TestRoomGeometryReader.swift */; };
+		615C5A5C292BAEE600202BC4 /* LottieLocalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615C5A5B292BAEE600202BC4 /* LottieLocalView.swift */; };
+		615C5A5E292BBBE600202BC4 /* FunRoomLottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615C5A5D292BBBE600202BC4 /* FunRoomLottie.swift */; };
+		615C5A60292BBCD900202BC4 /* 127399-cycle-rider.json in Resources */ = {isa = PBXBuildFile; fileRef = 615C5A5F292BBCD900202BC4 /* 127399-cycle-rider.json */; };
 		615D391F291FB04000251211 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D391E291FB04000251211 /* AppDelegate.swift */; };
 		615D3921291FB04000251211 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D3920291FB04000251211 /* SceneDelegate.swift */; };
 		615D3923291FB04000251211 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D3922291FB04000251211 /* ViewController.swift */; };
@@ -42,7 +45,6 @@
 		615D39872920DF0900251211 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D39862920DF0900251211 /* ContactViewModel.swift */; };
 		615D398A2920F30D00251211 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D39892920F30D00251211 /* Member.swift */; };
 		615D398C2920FD3200251211 /* ContactSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D398B2920FD3200251211 /* ContactSectionHeader.swift */; };
-		615D398E29211F7600251211 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D398D29211F7600251211 /* LottieView.swift */; };
 		6172D9A0292273AA00A78C35 /* AddFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D99F292273AA00A78C35 /* AddFriend.swift */; };
 		6172D9A2292273C300A78C35 /* GroupRoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9A1292273C300A78C35 /* GroupRoomList.swift */; };
 		6172D9A42922741700A78C35 /* FriendTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9A32922741700A78C35 /* FriendTag.swift */; };
@@ -75,7 +77,7 @@
 		6172D9E82928702B00A78C35 /* TestRoomState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9E72928702B00A78C35 /* TestRoomState.swift */; };
 		6172D9EB2928950400A78C35 /* TestRoomBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9EA2928950400A78C35 /* TestRoomBinding.swift */; };
 		6172D9EE2928ADF500A78C35 /* TestRoomPublish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9ED2928ADF500A78C35 /* TestRoomPublish.swift */; };
-		6172D9F12928BC8C00A78C35 /* TestRoomLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9F02928BC8C00A78C35 /* TestRoomLocalization.swift */; };
+		6172D9F12928BC8C00A78C35 /* FunRoomLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9F02928BC8C00A78C35 /* FunRoomLocalization.swift */; };
 		6172DA042929E65E00A78C35 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172DA032929E65E00A78C35 /* Language.swift */; };
 		6172DA072929E84D00A78C35 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6172DA092929E84D00A78C35 /* Localizable.strings */; };
 		6172DA12292A1E8E00A78C35 /* FunRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172DA11292A1E8E00A78C35 /* FunRoom.swift */; };
@@ -105,6 +107,9 @@
 		4C8DEF664496711E5B304AD8 /* Pods-wechatSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wechatSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-wechatSwiftUITests/Pods-wechatSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		58BB1A36A9F2B3185B0B87C3 /* Pods-wechatSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wechatSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-wechatSwiftUI/Pods-wechatSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		615C5A58292BA3D500202BC4 /* TestRoomGeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRoomGeometryReader.swift; sourceTree = "<group>"; };
+		615C5A5B292BAEE600202BC4 /* LottieLocalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieLocalView.swift; sourceTree = "<group>"; };
+		615C5A5D292BBBE600202BC4 /* FunRoomLottie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunRoomLottie.swift; sourceTree = "<group>"; };
+		615C5A5F292BBCD900202BC4 /* 127399-cycle-rider.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "127399-cycle-rider.json"; sourceTree = "<group>"; };
 		615D391B291FB04000251211 /* wechatSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wechatSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		615D391E291FB04000251211 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		615D3920291FB04000251211 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,7 +147,6 @@
 		615D39862920DF0900251211 /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
 		615D39892920F30D00251211 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		615D398B2920FD3200251211 /* ContactSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSectionHeader.swift; sourceTree = "<group>"; };
-		615D398D29211F7600251211 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		6172D99F292273AA00A78C35 /* AddFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriend.swift; sourceTree = "<group>"; };
 		6172D9A1292273C300A78C35 /* GroupRoomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRoomList.swift; sourceTree = "<group>"; };
 		6172D9A32922741700A78C35 /* FriendTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTag.swift; sourceTree = "<group>"; };
@@ -175,7 +179,7 @@
 		6172D9E72928702B00A78C35 /* TestRoomState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRoomState.swift; sourceTree = "<group>"; };
 		6172D9EA2928950400A78C35 /* TestRoomBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRoomBinding.swift; sourceTree = "<group>"; };
 		6172D9ED2928ADF500A78C35 /* TestRoomPublish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRoomPublish.swift; sourceTree = "<group>"; };
-		6172D9F02928BC8C00A78C35 /* TestRoomLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRoomLocalization.swift; sourceTree = "<group>"; };
+		6172D9F02928BC8C00A78C35 /* FunRoomLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunRoomLocalization.swift; sourceTree = "<group>"; };
 		6172DA032929E65E00A78C35 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		6172DA082929E84D00A78C35 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6172DA0B2929E85400A78C35 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -236,6 +240,16 @@
 				615C5A58292BA3D500202BC4 /* TestRoomGeometryReader.swift */,
 			);
 			path = GeometryReader;
+			sourceTree = "<group>";
+		};
+		615C5A5A292BAEC200202BC4 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				615C5A5F292BBCD900202BC4 /* 127399-cycle-rider.json */,
+				615C5A5B292BAEE600202BC4 /* LottieLocalView.swift */,
+				615C5A5D292BBBE600202BC4 /* FunRoomLottie.swift */,
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 		615D3912291FB04000251211 = {
@@ -369,7 +383,6 @@
 			children = (
 				6172D9A929227F7900A78C35 /* Dot.swift */,
 				615D3963291FD12800251211 /* Separator.swift */,
-				615D398D29211F7600251211 /* LottieView.swift */,
 				6172D9B229228B7000A78C35 /* SpaceHolder.swift */,
 			);
 			path = Components;
@@ -570,7 +583,7 @@
 		6172D9EF2928BC7900A78C35 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				6172D9F02928BC8C00A78C35 /* TestRoomLocalization.swift */,
+				6172D9F02928BC8C00A78C35 /* FunRoomLocalization.swift */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -587,6 +600,7 @@
 		6172DA0E292A1E5E00A78C35 /* FunRoom */ = {
 			isa = PBXGroup;
 			children = (
+				615C5A5A292BAEC200202BC4 /* Lottie */,
 				6172D9EF2928BC7900A78C35 /* Localization */,
 				6172DA11292A1E8E00A78C35 /* FunRoom.swift */,
 			);
@@ -720,6 +734,7 @@
 				6172D9BE2923C65400A78C35 /* mine_list_net_json.json in Resources */,
 				6172DA072929E84D00A78C35 /* Localizable.strings in Resources */,
 				615D3926291FB04000251211 /* Main.storyboard in Resources */,
+				615C5A60292BBCD900202BC4 /* 127399-cycle-rider.json in Resources */,
 				6172D9CC2924C28600A78C35 /* chat_list_net_json.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -820,13 +835,13 @@
 				6172D9A829227A0C00A78C35 /* DiscoverRow.swift in Sources */,
 				6172D9BC2923C57900A78C35 /* MineJSON.swift in Sources */,
 				6172D9A42922741700A78C35 /* FriendTag.swift in Sources */,
-				615D398E29211F7600251211 /* LottieView.swift in Sources */,
 				6172D9AF292285DB00A78C35 /* DiscoverViewModel.swift in Sources */,
 				615D3923291FB04000251211 /* ViewController.swift in Sources */,
 				6172D9BA2923C52300A78C35 /* MineHeader.swift in Sources */,
 				6172D9B82923C4FD00A78C35 /* MineList.swift in Sources */,
 				6172D9CE2924C7CA00A78C35 /* ChatViewModel.swift in Sources */,
 				615D3956291FBA9500251211 /* Chat.swift in Sources */,
+				615C5A5C292BAEE600202BC4 /* LottieLocalView.swift in Sources */,
 				615D395F291FBC2900251211 /* Mine.swift in Sources */,
 				615D3973291FE78C00251211 /* Search.swift in Sources */,
 				615D3975291FE79700251211 /* SearchBar.swift in Sources */,
@@ -836,7 +851,7 @@
 				615D3971291FDEA000251211 /* ChatRoom.swift in Sources */,
 				615D3953291FB44600251211 /* TabBarItemDatable.swift in Sources */,
 				615D396D291FD7F000251211 /* ChatMessageModel.swift in Sources */,
-				6172D9F12928BC8C00A78C35 /* TestRoomLocalization.swift in Sources */,
+				6172D9F12928BC8C00A78C35 /* FunRoomLocalization.swift in Sources */,
 				6172D9D92924E82200A78C35 /* MomentList.swift in Sources */,
 				6172DA042929E65E00A78C35 /* Language.swift in Sources */,
 				6172D9DB2924EAFD00A78C35 /* MomentHeader.swift in Sources */,
@@ -855,6 +870,7 @@
 				615D398329209AC500251211 /* Api.swift in Sources */,
 				6172D9D52924DB9C00A78C35 /* MomentJSON.swift in Sources */,
 				6172D9AA29227F7900A78C35 /* Dot.swift in Sources */,
+				615C5A5E292BBBE600202BC4 /* FunRoomLottie.swift in Sources */,
 				6172D9D12924D83800A78C35 /* Moment.swift in Sources */,
 				6172D9DE2925021100A78C35 /* EnvironmentValues_StatusBarStyle.swift in Sources */,
 				615D3951291FB35900251211 /* TabBar.swift in Sources */,

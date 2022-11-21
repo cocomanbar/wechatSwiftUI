@@ -1,5 +1,5 @@
 //
-//  TestRoomLocalization.swift
+//  FunRoomLocalization.swift
 //  wechatSwiftUI
 //
 //  Created by tanxl on 2022/11/19.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TestRoomLocalization: View {
+struct FunRoomLocalization: View {
     var title: String = ""
     
     @State var turn: Bool = false
@@ -48,8 +48,8 @@ struct TestRoomLocalization: View {
     @Environment(\.locale) var locale
 }
 
-struct TestRoomLocalization_Previews: PreviewProvider {
+struct FunRoomLocalization_Previews: PreviewProvider {
     static var previews: some View {
-        TestRoomLocalization()
+        FunRoomLocalization()
     }
 }
