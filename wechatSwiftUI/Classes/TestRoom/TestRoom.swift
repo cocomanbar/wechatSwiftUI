@@ -41,6 +41,8 @@ struct TestRoom: View {
             view = AnyView(TestRoomBinding(title: model.title))
         case TestModel.Published:
             view = AnyView(TestRoomPublish(title: model.title))
+        case TestModel.GeometryReader:
+            view = AnyView(TestRoomGeometryReader(title: model.title))
             
         default :
             view = AnyView(TestRoomState())
@@ -102,6 +104,7 @@ extension TestModel: Modelable {
             TestModel(id: "1", title: TestModel.State, description: "关于\n \(TestModel.State) \n的例子"),
             TestModel(id: "2", title: TestModel.Binding, description: "关于\n \(TestModel.Binding) \n的例子"),
             TestModel(id: "3", title: TestModel.Published, description: "关于\n \(TestModel.Published) \(TestModel.ObservableObject) \(TestModel.ObservedObject) \n的例子"),
+            TestModel(id: "4", title: TestModel.GeometryReader, description: "关于\n \(TestModel.GeometryReader) \n的例子"),
             
         ]
     }
@@ -119,5 +122,7 @@ extension TestModel {
     static let Environment = "@Environment"
     static let EnvironmentObject = "@EnvironmentObject"
     
+    
+    static let GeometryReader = "GeometryReader"
 }
 
