@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		437DA2A9798C1287624D1CFB /* libPods-wechatSwiftUI-wechatSwiftUIUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86980E4E88448408C02FEBA3 /* libPods-wechatSwiftUI-wechatSwiftUIUITests.a */; };
 		615C5A59292BA3D500202BC4 /* TestRoomGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615C5A58292BA3D500202BC4 /* TestRoomGeometryReader.swift */; };
-		615C5A5C292BAEE600202BC4 /* LottieLocalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615C5A5B292BAEE600202BC4 /* LottieLocalView.swift */; };
+		615C5A5C292BAEE600202BC4 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615C5A5B292BAEE600202BC4 /* LottieView.swift */; };
 		615C5A5E292BBBE600202BC4 /* FunRoomLottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615C5A5D292BBBE600202BC4 /* FunRoomLottie.swift */; };
 		615C5A60292BBCD900202BC4 /* 127399-cycle-rider.json in Resources */ = {isa = PBXBuildFile; fileRef = 615C5A5F292BBCD900202BC4 /* 127399-cycle-rider.json */; };
 		615D391F291FB04000251211 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D391E291FB04000251211 /* AppDelegate.swift */; };
@@ -107,7 +107,7 @@
 		4C8DEF664496711E5B304AD8 /* Pods-wechatSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wechatSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-wechatSwiftUITests/Pods-wechatSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		58BB1A36A9F2B3185B0B87C3 /* Pods-wechatSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wechatSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-wechatSwiftUI/Pods-wechatSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		615C5A58292BA3D500202BC4 /* TestRoomGeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRoomGeometryReader.swift; sourceTree = "<group>"; };
-		615C5A5B292BAEE600202BC4 /* LottieLocalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieLocalView.swift; sourceTree = "<group>"; };
+		615C5A5B292BAEE600202BC4 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		615C5A5D292BBBE600202BC4 /* FunRoomLottie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunRoomLottie.swift; sourceTree = "<group>"; };
 		615C5A5F292BBCD900202BC4 /* 127399-cycle-rider.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "127399-cycle-rider.json"; sourceTree = "<group>"; };
 		615D391B291FB04000251211 /* wechatSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wechatSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,7 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				615C5A5F292BBCD900202BC4 /* 127399-cycle-rider.json */,
-				615C5A5B292BAEE600202BC4 /* LottieLocalView.swift */,
+				615C5A5B292BAEE600202BC4 /* LottieView.swift */,
 				615C5A5D292BBBE600202BC4 /* FunRoomLottie.swift */,
 			);
 			path = Lottie;
@@ -841,7 +841,7 @@
 				6172D9B82923C4FD00A78C35 /* MineList.swift in Sources */,
 				6172D9CE2924C7CA00A78C35 /* ChatViewModel.swift in Sources */,
 				615D3956291FBA9500251211 /* Chat.swift in Sources */,
-				615C5A5C292BAEE600202BC4 /* LottieLocalView.swift in Sources */,
+				615C5A5C292BAEE600202BC4 /* LottieView.swift in Sources */,
 				615D395F291FBC2900251211 /* Mine.swift in Sources */,
 				615D3973291FE78C00251211 /* Search.swift in Sources */,
 				615D3975291FE79700251211 /* SearchBar.swift in Sources */,

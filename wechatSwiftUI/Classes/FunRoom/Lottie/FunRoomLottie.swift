@@ -33,9 +33,10 @@ struct FunRoomLottie: View {
                 }
                 .frame(height: 20)
                 
-                LottieLocalView(name: "127399-cycle-rider.json", status: $status)
+                LottieView(lottieData: LottieData.name("127399-cycle-rider.json"), status: $status)
                     .frame(width: 100, height: 100)
                     .border(.pink)
+                
             }
             .padding()
         }
